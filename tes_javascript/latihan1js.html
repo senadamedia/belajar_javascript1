@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Java Script</title>
+	<script type="text/javascript">
+		function salam(){
+			//tangkap request element form
+			var frm = window.document.getElementById ("formulir");
+			var nama = frm.siswa.value;
+			//tampilkan salam jika element siswa diisi
+			if (nama != "") {
+				alert ("Selamat Pagi " + nama);
+			} 
+			else {
+				alert ("Maaf nama anda belum di input")
+
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<form id="formulir">
+		Nama Anda
+		<input type="text" name="siswa" value=" " />
+		<input type="button" name="proses" value="kirim" onclick="salam()" />
+	</form>
+
+</body>
+</html>
